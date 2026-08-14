@@ -21,15 +21,22 @@
       const domNode = document.getElementById('app');
       
       function HomePage() {
+        const names = ['Joanna', 'Chaffi', 'Faye'];
+
         return (
           <div>
-            <Header />
+            <Header title="Develop. Preview. Ship."/>
+            <ul>
+              {names.map((name) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
           </div>
         );
       }
 
-      function Header() {
-        return <h1>Develop. Preview. Ship.</h1>;
+      function Header({ title }) {
+        return <h1>{title}</h1>;
       }
 
       const root = createRoot(domNode);
