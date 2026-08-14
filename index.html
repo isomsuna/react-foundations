@@ -2,8 +2,21 @@
 <html>
   <head></head>
   <body>
-    <div id="app">
+    <div id="app"></div>
+    <script type="text/javascript">
+      // Target the div element with 'app' id
+      const app = document.getElementById('app');
 
-    </div>
+      // Create a new h1 element
+      const header = document.createElement('h1');
+      const text = 'Develop. Preview. Ship.';
+      const headerContent = document.createTextNode(text);
+
+      // Append the text node to the h1 element
+      header.appendChild(headerContent);
+
+      // Append the header to the div
+      app.appendChild(header);
+    </script>
   </body>
 </html>
