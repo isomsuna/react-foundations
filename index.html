@@ -1,22 +1,28 @@
 <!doctype html>
 <html>
-  <head></head>
+  <head>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react",
+          "react-dom/client": "https://esm.sh/react-dom/client",
+          "react/jsx-runtime": "https://esm.sh/react/jsx-runtime"
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/@babel/standalone@latest/babel.min.js"></script>
+  </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript">
-      // Target the div element with 'app' id
-      const app = document.getElementById('app');
+    <script type="text/babel" data-type="module" data-presets="react">
+      import React from 'react';
+      import { createRoot } from 'react-dom/client';
 
-      // Create a new h1 element
-      const header = document.createElement('h1');
-      const text = 'Develop. Preview. Ship.';
-      const headerContent = document.createTextNode(text);
-
-      // Append the text node to the h1 element
-      header.appendChild(headerContent);
-
-      // Append the header to the div
-      app.appendChild(header);
+      const domNode = document.getElementById('app');
+      const root = createRoot(domNode);
+      root.render(
+        <h1>Develop. Preview. Ship.</h1>
+      );
     </script>
   </body>
 </html>
