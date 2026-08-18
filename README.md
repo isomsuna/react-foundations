@@ -11,5 +11,5 @@ I included the full HTML structure to be able to use Live Server Extension by Ri
 To install Next JS, run:
 
 ```
-npm install react@latest react-dom@latest next@latest
+npm install
 ```
