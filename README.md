@@ -13,3 +13,15 @@ To install Next JS, run:
 ```
 npm install
 ```
+
+Then run:
+
+```
+npm run dev
+```
+
+Default port is at 
+
+```
+http://localhost:3000
+```
